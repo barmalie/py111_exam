@@ -20,11 +20,14 @@ def repeat(number=1):
 
 @repeat(20)
 def print_my_call():
+    count = []
     start_time = random.randint(0, 23)
     end_time = random.randint(1, 24)
     if start_time > end_time:
         zayavka = (end_time, start_time)
-        print(zayavka, end=' ')
+        count.append(zayavka)
+        print(count, end=' ')
+        print(len(count))
 
 
 
