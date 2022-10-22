@@ -17,27 +17,45 @@ for slog in range(1, count_slog + 1):
         #list2 = []# список игроков
         list_count_player.append(player)
     players = len(list_count_player)
-    print(list_count_player)
-    print(players)
     counter = 0
-    while slog < count_pleyer:
+    pointer = 1
+    while count_slog > 1:
 
         if count_slog % players == 0:
             list_count_player.pop(player)
-
-            counter -= 1
+            pointer = pointer - 1
         else:
-            print("победитель", player)
+            count_slog % players == 1
+            list_count_player.pop(player)
+            pointer = pointer + 1
+            counter = counter + 1
+            #print("победитель", player)
+        if counter == len(count_slog):
+            counter = 0
+print(count_slog)
 
 
 
-    # print(list_count_player)
-    #     # print(count_slog)
-    # for i in range(0, count_pleyer):
-    #     if count_slog%players == 0:
-    #         list_count_player.pop(i) #out of range
+
+    # for players in range(1, count_pleyer+1):
+    #
+    #     if count_slog % players == 0:
+    #         list_count_player.pop(players-1) #out of range
     #         print(list_count_player)
-            #print(slog)
+while len(members) > 1:
+    if k % n == 0:
+        # del members[index]
+        members.pop(i)
+        point = point - 1
+        print(members)
+
+    else:
+        k % n == 1
+        # del members[index-1]
+        members.pop(i)
+        point += 1
+        index += 1
+
 """         
 # Считалка
 a = [10]
