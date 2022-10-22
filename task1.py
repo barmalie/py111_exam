@@ -16,23 +16,29 @@ for slog in range(1, count_slog + 1):
     for player in range(1, count_pleyer+1):
         #list2 = []# список игроков
         list_count_player.append(player)
-    players = len(list_count_player)
-    counter = 0
-    pointer = 1
-    while count_slog > 1:
+    for player in list_count_player:
 
-        if count_slog % players == 0:
-            list_count_player.pop(player)
-            pointer = pointer - 1
-        else:
-            count_slog % players == 1
-            list_count_player.pop(player)
-            pointer = pointer + 1
-            counter = counter + 1
-            #print("победитель", player)
-        if counter == (count_slog):
-            counter = 0
-print(count_slog)
+        players = len(list_count_player)
+        counter = 0
+        pointer = 1
+    while slog > player:
+        if count_slog % count_pleyer == 0:
+            list_count_player.pop()
+            print(list_count_player)
+            pointer -= 1
+    #while slog > player:
+        #number = count_slog % players
+
+        # if player == 1:
+        #      #print(player)
+        #      counter -=1
+        #
+        # else:
+        #     pointer -= 1
+        #     #print("победитель", player)
+        # if counter == (count_slog):
+        #     counter = 0
+#print(count_slog)
 
 
 
