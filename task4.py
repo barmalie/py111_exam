@@ -12,10 +12,7 @@ print(q(elem))
 end_time = time.time()
 print("время выполнения {} секунд".format(end_time - start_time))
 
-
 def merge_sort(collection: list) -> list:
-
-
     def merge(left: list, right: list) -> list:
 
         def _merge():
