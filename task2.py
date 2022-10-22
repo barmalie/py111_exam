@@ -1,8 +1,8 @@
-create pole
-create item
-price every step
-controll item
-algoryphm
+# create pole
+# create item
+# price every step
+# controll item
+# algoryphm
 
 
 coasts = [[2, 7, 9, 3], [12, 4, 1, 9], [1, 5, 2, 5]]
