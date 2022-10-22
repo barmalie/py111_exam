@@ -30,7 +30,7 @@ for slog in range(1, count_slog + 1):
             pointer = pointer + 1
             counter = counter + 1
             #print("победитель", player)
-        if counter == len(count_slog):
+        if counter == (count_slog):
             counter = 0
 print(count_slog)
 
@@ -42,19 +42,7 @@ print(count_slog)
     #     if count_slog % players == 0:
     #         list_count_player.pop(players-1) #out of range
     #         print(list_count_player)
-while len(members) > 1:
-    if k % n == 0:
-        # del members[index]
-        members.pop(i)
-        point = point - 1
-        print(members)
 
-    else:
-        k % n == 1
-        # del members[index-1]
-        members.pop(i)
-        point += 1
-        index += 1
 
 """         
 # Считалка
