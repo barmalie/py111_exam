@@ -1,9 +1,9 @@
-text = "flfkxkckg lglglglvl glofkg, fkfkfkf."
+text = "flfkxkckg lglglglvl glofkg, fkfkfkfrdreh."
 modify_text = text.replace(" ", "")
 modify_text = modify_text.replace(",", "")
 modify_text = modify_text.replace(".", "")
 
-
+print(len(modify_text)//2)
 count_slog = len(modify_text) // 2
 for slog in range(1, count_slog + 1):
     list = []# список слогов
@@ -11,19 +11,34 @@ for slog in range(1, count_slog + 1):
 
 
     count_pleyer = 3
+    list_count_player = []
     assert count_pleyer < count_slog
-    for i in range(1, count_pleyer+1):
-        list2 = []# список игроков
-        list2.append(i)
+    for player in range(1, count_pleyer+1):
+        #list2 = []# список игроков
+        list_count_player.append(player)
+    players = len(list_count_player)
+    print(list_count_player)
+    print(players)
+    counter = 0
+    while slog < count_pleyer:
 
-        print(list2)
-        print(count_slog)
-    for i in range(0, count_pleyer):
-        if count_slog%slog == 0:
-            list2.pop(slog) #out of range
-            print(list2)
-            print(slog)
+        if count_slog % players == 0:
+            list_count_player.pop(player)
 
+            counter -= 1
+        else:
+            print("победитель", player)
+
+
+
+    # print(list_count_player)
+    #     # print(count_slog)
+    # for i in range(0, count_pleyer):
+    #     if count_slog%players == 0:
+    #         list_count_player.pop(i) #out of range
+    #         print(list_count_player)
+            #print(slog)
+"""         
 # Считалка
 a = [10]
 #a = list(map(int, input().split()))
@@ -69,6 +84,7 @@ while len(members) > 1:
 # print(members)
 
 
+"""
 """
 if point == k:
       #print (index)
