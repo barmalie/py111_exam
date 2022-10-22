@@ -25,7 +25,7 @@ for slog in range(1, count_slog + 1):
             print(slog)
 
 # Считалка
-a= [10]
+a = [10]
 #a = list(map(int, input().split()))
 list_count_player = [i for i in range(1, a[0] + 1)]  # формируем список из кол-во человек
 list_player_exit = []  # новый массив для списка из тех кто выбыл
@@ -40,3 +40,50 @@ while 0 < len(list_count_player):  # пока в массиве не остан�
         i1 += 1  # и увеличиваем до первоначального состояния
 
 print(list_player_exit)  # выводим новый массив
+
+members = []
+n = 4
+for i in range(-1, n):
+    members.append('mem' + str(i + 1))
+print(members)
+# print (len(members))
+k = 16
+point = 1
+index = 0
+while len(members) > 1:
+    if k % n == 0:
+        # del members[index]
+        members.pop(i)
+        point = point - 1
+        print(members)
+
+    else:
+        k % n == 1
+        # del members[index-1]
+        members.pop(i)
+        point += 1
+        index += 1
+
+    if index == len(members):
+        index = 0
+# print(members)
+
+
+"""
+if point == k:
+      #print (index)
+      #del members[index]
+
+      point = 1
+      members.pop(index)
+      print(members)
+      print(k)
+   else:
+      point +=1
+      index +=1
+   if index == len(members):
+      index = 0
+      #print(k)
+print(members)
+"""
+
