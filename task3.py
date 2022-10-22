@@ -31,18 +31,18 @@ def print_my_call():
             count.append(zayavka)
 
     sort_index = sorted(count, key=lambda zayavka :zayavka[0])
-    print(sort_index)
+    #print(sort_index)
     n = 0
-
     list_wish = []
     for wish in sort_index:
-        try:
-            sort_index[n+1][0] > sort_index[n][1]
+        if sort_index[n+1][0] > sort_index[n][1]:
             list_wish.append(wish)
-
             print(list_wish)
-        except:
+        else:
             print(wish)
+
+
+        #print(set(list_wish))
 
     #print(list_wish[n])
 
