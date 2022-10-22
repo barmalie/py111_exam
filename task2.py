@@ -1,6 +1,4 @@
 
-
-
 coasts = [[2, 7, 9, 3], [12, 4, 1, 9], [1, 5, 2, 5]]
 
 total_coasts = [[0 for _ in range(len(coasts[0]))] for _ in range(len(coasts))]#таблица стоимостей
@@ -34,9 +32,17 @@ def calculate_path(total_costs, point):
             return 0
         if not 0<=j<= cols:
             return 0
-        return sum([get_step(i + 1,j + 1),
+        return sum([get_step(i + 1, j + 1),
                     get_step(i - 1, j + 1),
                     get_step(i + 1, j - 1),
                     get_step(i - 1, j - 1),
                     get_step(i , j )])
         return get_step(i = point[0], j = point[1])
+    def get_coast(n):
+        if n == 1:
+            return total_coasts[1]
+        if n == 2:
+            return coasts[2]
+        current_position = coasts[n]
+        return  current_position+min(get_coast(n-1),get_coast(n-2))
+    print(get_coast())
